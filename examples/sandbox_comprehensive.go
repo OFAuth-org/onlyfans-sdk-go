@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	ofauth "github.com/ofauth-org/ofauth-go"
+	ofauth "github.com/ofauth-org/onlyfans-sdk-go"
 )
 
 var (
