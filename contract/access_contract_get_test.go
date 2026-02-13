@@ -125,7 +125,7 @@ func defaultQuery(route string, fixtures map[string]string) url.Values {
 		route == "/subscribers" ||
 		route == "/subscriptions" ||
 		route == "/chats" ||
-		route == "/mass-messages" ||
+		route == "/analytics/mass-messages/sent" ||
 		route == "/analytics/mass-messages/purchased" ||
 		route == "/earnings/transactions" ||
 		route == "/earnings/chargebacks" ||
@@ -460,7 +460,7 @@ func TestAccessGetContractGeneratedSDK(t *testing.T) {
 			case "subscriptionId":
 				parsed, _, err = rateLimitedGet("/v2/access/subscriptions", url.Values{"limit": []string{"1"}})
 			case "massMessageId":
-				parsed, _, err = rateLimitedGet("/v2/access/mass-messages", url.Values{"limit": []string{"1"}})
+				parsed, _, err = rateLimitedGet("/v2/access/analytics/mass-messages/sent", url.Values{"limit": []string{"1"}})
 			case "promotionId":
 				parsed, _, err = rateLimitedGet("/v2/access/promotions", url.Values{"limit": []string{"1"}})
 			case "bundleId":
